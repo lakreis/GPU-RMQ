@@ -1,0 +1,6 @@
+#pragma once
+
+#define BSIZE @BSIZE@
+#define IS_LONG @IS_LONG@
+#define XXX_CG_SIZE_LOG @XXX_CG_SIZE_LOG@
+#define XXX_CG_AMOUNT_LOG @XXX_CG_AMOUNT_LOG@
