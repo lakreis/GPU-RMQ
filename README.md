@@ -14,9 +14,9 @@ The algorithms mentioned in the paper correspond to:
 - GPU-RMQ (CL) w/o warp intrinsics in OptiX w/ RT: 18 (Interleaved2)
 - GPU-RMW (CL) multi load: 24 (XXX_multiload)
 
-We adapted RTXRMQ from [rtxrmq](https://github.com/temporal-hpc/rtxrmq) to OptiX 8 (MIT License) and for HRMQ the implementation [hrmq](https://github.com/hferrada/rmq) (GNU GENERAL PUBLIC License) has to be included in in this repository. Therefore, create a directory *hrmq*, include the files of the mentioned repository and make the library (see README in the directory).
-For the algorithm LCA we additionally used the implementation [euler-meets-cuda-rmq](https://github.com/temporal-hpc/euler-meets-cuda-rmq) (no license), which itself is based on [euler-meets-cuda](https://github.com/stobis/euler-meets-cuda), and evaluated it in a separate repository.
-
+We adapted RTXRMQ from [rtxrmq](https://github.com/temporal-hpc/rtxrmq) (MIT License) to OptiX 8. For HRMQ, the implementation [hrmq](https://github.com/hferrada/rmq) (GNU GPL) must be included in this repository. Therefore, create a directory `hrmq`, include the files from the mentioned repository and build the library (see README in the directory).
+For the algorithm LCA we additionally used the implementation [euler-meets-cuda-rmq](https://github.com/temporal-hpc/euler-meets-cuda-rmq) (no license), which itself is based on [euler-meets-cuda](https://github.com/stobis/euler-meets-cuda) (no license), and evaluated it separately.
+  
 ## Dependencies
 - CUDA 12.9 or later
 - NVIDIA OptiX 8 (compatibility with OptiX 9 has not been tested)
@@ -68,7 +68,7 @@ Options:
    --save-input-data          if set arrays, queries and results for arrays > 2^24 are saved in a specified folder to reduce generation and result checking times 
 ```
 
-Note that some of our run scripts are in the directory */scripts*.
+Some run scripts are available in the `scripts/` directory.
 
 ## References
 [1] Lara Kreis, Justus Henneberg, Valentin Henkys, Felix Schuhknecht, Bertil Schmidt, GPU-RMQ: Accelerating Range Minimum Queries on Modern GPUs (2026)
